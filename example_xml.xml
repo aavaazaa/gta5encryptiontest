@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is just an example of an XML that could be transferred to the game. It might be incorrect -->
+<Response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ms="30" xmlns="CreateTicketResponse"><!-- xmlns:xsd and xmlns:xsi are not validated by the game AFAIK, but maybe... -->
+    <Status>1</Status><!-- Status is checked by the game. If it's not 1 - it counts as error -->
+    <Ticket>YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFh</Ticket><!-- FiveM says it's bunch of AAAAAA... -->
+    <PosixTime>1683463394</PosixTime>
+    <SecsUntilExpiration>86399</SecsUntilExpiration>
+    <Region>US</Region><!-- Seems unnecessary, but the field is in the game -->
+    <PlayerAccountId>262922018</PlayerAccountId>
+    <Services /><!-- Dunno what services are. They're empty in FiveM, but the game checks if the key is in XML -->
+    <Count>0</Count><!-- Services count -->
+    <PublicIp>127.0.0.1</PublicIp>
+    <SessionId>5</SessionId><!-- Once again, this is 5 in FiveM -->
+    <SessionKey>MDEyMzQ1Njc4OWFiY2RlZg==</SessionKey><!-- 0123456789abcdef in base64. It is used for encryption when ros-SecurityFlags are applied -->
+    <SessionTicket>vhASmPR0NnA7MZsdVCTCV/3XFABWGa9duCEscmAM0kcCDVEa7YR/rQ4kfHs2HIPIttq08TcxIzuwyPWbaEllvQ==</SessionTicket><!-- Some ticket crafted by FiveM devs. This ticket is used in SCS-Ticket field. Not sure how it's crafted, might be related to the PS3-specific data or maybe the npTicket -->
+    <CloudKey>8G8S9JuEPa3kp74FNQWxnJ5BXJXZN1NFCiaRRNWaAUR=</CloudKey><!-- Some key crafted by FiveM devs, unsure what it's purpose. Not sure how it's crafted, might be related to the PS3-specific data or maybe the npTicket -->
+    <RockstarAccount>
+        <RockstarId>262922018</RockstarId><!-- In FiveM code it's the same as PlayerAccountId. In later versions it's generated randomly -->
+        <Age>18</Age>
+        <AvatarUrl>Bully/b20.png</AvatarUrl>
+        <CountryCode>US</CountryCode>
+        <Email>example@example.com</Email>
+        <LanguageCode>en</LanguageCode>
+        <Nickname>TEST</Nickname>
+        <ZipCode>90001</ZipCode><!-- Seems unnecessary, but the field is in the game -->
+    </RockstarAccount>
+    <Privileges>1,2,3,4,5,6,8,9,10,11,14,15,16,17,18,19,21,22,22</Privileges><!-- Might be incorrect. In FiveM there's also a privilege 27 for later versions -->
+    <Privs><!-- Probably unnecessary for 1.06 -->
+        <p id="22" g="True"></p>
+    </Privs>
+</Response>
